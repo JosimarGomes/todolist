@@ -1,0 +1,8 @@
+.empty-feedback-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-support-grey);
+    padding: var(--spacing-medium) 0px;
+}

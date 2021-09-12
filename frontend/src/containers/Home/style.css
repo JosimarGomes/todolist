@@ -1,0 +1,12 @@
+.home-content {
+    display: flex;
+    width: 100%;
+}
+
+.home-content-side-menu {
+    width: 20%;
+}
+
+.home-content-project-detail {
+    width: 75%;
+}

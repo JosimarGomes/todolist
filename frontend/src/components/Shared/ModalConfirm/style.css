@@ -1,0 +1,9 @@
+.modal-confirm-content {
+    margin-bottom: var(--spacing-large);
+}
+
+.modal-confirm-content h3 {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}

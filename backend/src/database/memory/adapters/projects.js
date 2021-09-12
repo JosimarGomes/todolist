@@ -16,6 +16,7 @@ export default class ProjectsAdapter {
                     let projectObject = project;
                     projectObject.id = Math.floor(Math.random() * 1000);
                     projectObject.timmestamp = Date.now();
+                    projectObject.tasks = [];
                     
                     projects.push(projectObject)
                     resolve(projectObject);

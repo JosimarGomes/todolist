@@ -1,8 +1,9 @@
 import ValidatorEntity from "../../shared/helpers/validator-entity.js";
 
 export default class ProjectEntity {
-    constructor({ name, id }) {
+    constructor({ name, id, tasks = [] }) {
         this.name = name;
+        this.tasks = tasks;
 
         if (id) {
             this.id = Number(id);

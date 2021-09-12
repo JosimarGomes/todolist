@@ -1,0 +1,68 @@
+.project-detail-container {
+    min-height: 85vh;
+    width: 100%;
+    padding: var(--spacing-small);
+}
+
+.project-detail-container h1 {
+    font-weight: normal;
+    color: var(--color-support-grey);
+}
+
+.project-detail-header {
+    padding: var(--spacing-x-small);
+    border-bottom: 2px solid var(--color-support-light-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-detail-header .tools {
+    display: flex;
+    align-items: center;
+    color: var(--color-support-grey);
+}
+
+.project-detail-header .tools .info {
+    margin-right: var(--spacing-medium);
+    display: flex;
+}
+
+.project-detail-header .tools .info .icon {
+    width: 20px;
+}
+
+.project-detail-header .tools .info .complete {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-xx-small);
+    color: var(--color-success);
+}
+
+.project-detail-header .tools .info .pending {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-xx-small);
+    color: var(--color-danger);
+}
+
+.project-detail-header .tools .info .total {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-xx-small);
+}
+
+.project-detail-content {
+    padding: var(--spacing-small);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.project-detail-congratulations {
+    color: var(--color-success);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}

@@ -27,9 +27,7 @@ export default class TasksAdapter {
                 }
 
                 const { tasks = [] } = project;
-                console.log("tasks", tasks)
                 const task = tasks.find(tsk => tsk.id === Number(filter.id));
-                console.log("taskkk", task)
 
                 resolve(task);
             }, 1000)
@@ -50,8 +48,9 @@ export default class TasksAdapter {
                     let taskObject = task;
                     taskObject.id = Math.floor(Math.random() * 1000);
                     taskObject.timmestamp = Date.now();
+                    taskObject.status = 'pending';
                     
-                    projects[projectIndex]?.tasks?.push(taskObject)
+                    projects[projectIndex]?.tasks?.push(taskObject);
                     resolve(taskObject);
                 } catch(error) {
                     reject(error);

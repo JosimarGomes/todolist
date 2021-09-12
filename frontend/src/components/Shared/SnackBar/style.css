@@ -1,0 +1,33 @@
+.snack-bar-container {
+    background: red;
+    padding: var(--spacing-small)
+}
+
+.snack-bar-content {
+    background: var(--color-support-grey);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-small);
+    border-radius: 5px;
+}
+
+.snack-bar-content.success {
+    background: var(--color-success);
+}
+
+.snack-bar-content.error {
+    background: var(--color-danger);
+}
+
+.snack-bar-icon {
+    margin-right: var(--spacing-small);
+}
+
+.snack-bar-close-icon {
+    margin-left: var(--spacing-medium);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

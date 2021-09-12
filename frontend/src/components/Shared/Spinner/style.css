@@ -1,0 +1,10 @@
+.spinner-content {
+    color: var(--color-primary) !important;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-medium) 0px;
+}

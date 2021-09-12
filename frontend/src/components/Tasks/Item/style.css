@@ -1,0 +1,37 @@
+.task-item-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    /* background: red; */
+    /* margin-bottom: var(--spacing-xx-small); */
+    padding: var(--spacing-small);
+    border-bottom: 1px dashed var(--color-support-light-grey);
+}
+
+
+.task-item-content .input-checkbox {
+    width: 50px;
+    margin-right: var(--spacing-x-small);
+}
+
+.task-item-content .input-checkbox:checked {
+    color: red
+}
+
+.task-item-content .task-info {
+    color: var(--color-support-grey);
+    margin: 0px var(--spacing-xx-small);
+}
+
+.task-item-content.delayed .task-info {
+    color:var(--color-danger);
+}
+
+.task-item-content.delayed {
+    color: var(--color-danger);
+}
+
+.task-item-content.complete {
+    color: var(--color-support-grey);
+    text-decoration: line-through;
+}

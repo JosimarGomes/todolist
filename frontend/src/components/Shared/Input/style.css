@@ -1,0 +1,19 @@
+.input-default-container {
+    margin: var(--spacing-small) 0px;
+}
+
+.input-error {
+    border: var(--color-danger) 2px solid;
+}
+
+.input-checkbox-label {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-group-container {
+    display: flex;
+    width: 100%;
+}
