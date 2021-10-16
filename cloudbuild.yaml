@@ -1,10 +1,10 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/teste/todo-backend:latest', '-t', 'gcr.io/teste/todo-backend:$SHORT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/studious-vector-287619/todo-backend:latest', '-t', 'gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/teste/todo-backend:latest']
+    args: ['push', 'gcr.io/studious-vector-287619/todo-backend:latest']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/teste/todo-backend:$SHORT_SHA']
+    args: ['push', 'gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA']
     
