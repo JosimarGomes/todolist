@@ -31,8 +31,6 @@ export default class ProjectsApi {
             url: `${apiUrl}/v1/projects/${project.id}`,
         });
 
-        console.log('VEIO NO SERVICE');
-
         await httpRequest.delete();
 
         return true;
