@@ -11,7 +11,7 @@ steps:
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:
     - run
-    - --filename=k8s.yaml
+    - --filename=k8s
     - --image=gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA
     - --location=us-central1-c
     - --cluster=teste-cluster
