@@ -18,6 +18,6 @@ steps:
     ]
 
     env:
-      - 'CLOUDSDK_COMPUTE_ZONE=central1-c'
+      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
       - 'CLOUDSDK_CONTAINER_CLUSTER=teste-cluster'
     
