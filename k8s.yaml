@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: teste-todolist-deployment
+  name: teste-todolist-backend
   namespace: todolist-staging
 spec:
   replicas: 1
