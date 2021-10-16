@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['buld', '-t', 'gcr.io/teste/todo-backend:latest', '-t', 'gcr.io/teste/todo-backend:$SHORT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/teste/todo-backend:latest', '-t', 'gcr.io/teste/todo-backend:$SHORT_SHA', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', '-t', 'gcr.io/teste/todo-backend:latest']
