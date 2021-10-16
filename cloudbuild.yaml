@@ -13,8 +13,8 @@ steps:
       'set',
       'image',
       'deployment',
-      'teste-todolist-deployment',
-      'teste-todolist-deployment=gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA'
+      'teste-todolist-backend',
+      'teste-todolist-backend=gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA'
     ]
 
     env:
