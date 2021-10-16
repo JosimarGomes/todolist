@@ -7,15 +7,23 @@ steps:
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA']
+  
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args:
+    - run
+    - --filename=k8s.yaml
+    - --image=gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA
+    - --location=us-central1-c
+    - --cluster=teste-cluster
 
-  - name: 'gcr.io/cloud-builders/kubectl'
-    args: [
-      'set',
-      'image',
-      'deployment',
-      'teste-todolist-backend',
-      'teste-todolist-backend=gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA'
-    ]
+  # - name: 'gcr.io/cloud-builders/kubectl'
+  #   args: [
+  #     'set',
+  #     'image',
+  #     'deployment',
+  #     'teste-todolist-backend',
+  #     'teste-todolist-backend=gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA'
+  #   ]
 
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
