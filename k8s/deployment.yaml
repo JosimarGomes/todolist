@@ -10,7 +10,7 @@ spec:
       app: teste-todolist-backend
   template:
     metadata:
-    namespace: todolist-staging
+      namespace: todolist-staging
       labels:
         app: teste-todolist-backend
     spec:
