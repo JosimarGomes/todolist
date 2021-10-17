@@ -5,9 +5,6 @@ steps:
       '--build-arg', 'ALLOWED_CORS=${_ALLOWED_CORS}',
       '--build-arg', 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
     ]
-    env:
-      - 'ALLOWED_CORS=${_ALLOWED_CORS}'
-      - 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/studious-vector-287619/todo-backend:latest']
