@@ -1,6 +1,10 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/studious-vector-287619/todo-backend:latest', '-t', 'gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA', '.']
+    args: [
+      'build', '-t', 'gcr.io/studious-vector-287619/todo-backend:latest', '-t', 'gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA', '.',
+      '--build-args', 'ALLOWED_CORS=${_ALLOWED_CORS}',
+      '--build-args', 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
+    ]
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/studious-vector-287619/todo-backend:latest']
@@ -28,6 +32,4 @@ steps:
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
       - 'CLOUDSDK_CONTAINER_CLUSTER=teste-cluster'
-      - 'ALLOWED_CORS=${_ALLOWED_CORS}'
-      - 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
     
