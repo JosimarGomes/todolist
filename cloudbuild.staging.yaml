@@ -2,9 +2,12 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build', '-t', 'gcr.io/studious-vector-287619/todo-backend:latest', '-t', 'gcr.io/studious-vector-287619/todo-backend:$SHORT_SHA', '.',
-      '--build-args', 'ALLOWED_CORS=${_ALLOWED_CORS}',
-      '--build-args', 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
+      '--build-arg', 'ALLOWED_CORS=${_ALLOWED_CORS}',
+      '--build-arg', 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
     ]
+    env:
+      - 'ALLOWED_CORS=$ALLOWED_CORS'
+      - 'DATABASE_CONNECTION_STRING=$DATABASE_CONNECTION_STRING'
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/studious-vector-287619/todo-backend:latest']
