@@ -4,7 +4,7 @@ metadata:
   name: todolist-backend-service
   namespace: todolist
   labels:
-    app: teste-todolist
+    app: teste-todolist-backend
 spec:
   type: LoadBalancer
   ports:
