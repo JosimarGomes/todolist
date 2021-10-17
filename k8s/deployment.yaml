@@ -2,15 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: teste-todolist-backend
-  namespace: todolist-staging
+  namespace: todolis
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: teste-todolist-backend
   template:
     metadata:
-      namespace: todolist-staging
+      namespace: todolist
       labels:
         app: teste-todolist-backend
     spec:
