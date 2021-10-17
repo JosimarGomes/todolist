@@ -17,7 +17,9 @@ routes.forEach((route) => {
 });
 
 app.get('/api/v1', (req, res) => {
-    res.send('running');
+    /* eslint-disable no-undef */
+    const envs = process.env
+    res.send(`Running = ${JSON.stringify(envs)}`);
 });
 
 app.use(errorMiddleware);

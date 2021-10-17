@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const allowedDomains = process.env.ALLOWED_CORS || '*';
+const allowedDomains = process.env.ALLOWED_CORS || '';
 const whitelist = allowedDomains.split(';');
 
 const corsOptions = {
