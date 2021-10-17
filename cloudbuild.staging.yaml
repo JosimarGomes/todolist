@@ -27,7 +27,7 @@ steps:
 
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=teste-cluster',
-      - 'ALLOWED_CORS=${_ALLOWED_CORS}',
+      - 'CLOUDSDK_CONTAINER_CLUSTER=teste-cluster'
+      - 'ALLOWED_CORS=${_ALLOWED_CORS}'
       - 'DATABASE_CONNECTION_STRING=${_DATABASE_CONNECTION_STRING}'
     
